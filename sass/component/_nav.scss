@@ -50,6 +50,7 @@
         &:hover {
           color: $color-white;
         }
+
         &::after {
           position: absolute;
           content: attr(data-after);
