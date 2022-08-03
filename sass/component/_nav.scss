@@ -1,0 +1,172 @@
+#nav {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  background: transparent;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .nav {
+    min-height: 2vh;
+    border-color: transparent;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 120rem;
+    padding: 0 0rem;
+    .navlist ul {
+      display: flex;
+      list-style: none;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      left: 100%;
+      top: 0;
+      background-color: $color-primary;
+      align-items: center;
+      overflow-x: hidden;
+      z-index: 1;
+      flex-direction: column;
+      justify-content: center;
+      transition: left ease 0.5s;
+      &.active {
+        left: 15%;
+      }
+      a {
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: 0.2rem;
+        text-transform: capitalize;
+        padding: 2rem;
+        display: block;
+        color: $color-span;
+        &:hover {
+          color: $color-white;
+        }
+        &::after {
+          position: absolute;
+          content: attr(data-after);
+          top: 50%;
+          left: 50%;
+          color: rgba(240, 248, 255, 0.021);
+          transform: translate(-50%, -50%) scale(0);
+          font-size: 8rem;
+          letter-spacing: 50px;
+          z-index: -1;
+          transition: all ease 0.5s;
+        }
+      }
+      & li:hover a::after {
+        transform: translate(-50%, -50%) scale(1);
+        letter-spacing: initial;
+      }
+    }
+    .hamburger.active .bar.bar::after,
+    .hamburger.active .bar.bar::before {
+      top: 0;
+      bottom: 0;
+    }
+    .hamburger {
+      z-index: 100;
+      height: 5rem;
+      width: 5rem;
+      display: inline-block;
+      border: 3px solid white;
+      border-radius: 50%;
+      position: relative;
+      right: 0;
+      top: 0rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0.8);
+      margin-right: 2rem;
+      &::after {
+        position: absolute;
+        height: 100%;
+        animation: hamburger_plus 1s ease infinite;
+
+        width: 100%;
+        border-radius: 50%;
+        content: "";
+        border: 3px solid white;
+      }
+      .bar {
+        height: 2px;
+        width: 2rem;
+        background-color: #fff;
+        position: relative;
+        z-index: -1;
+        &::after,
+        &::before {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          content: "";
+          background-color: white;
+          left: 0;
+          transition: all 0.5s ease;
+          transition-property: top bottom;
+        }
+        &::after {
+          top: 0.8rem;
+        }
+        &::before {
+          bottom: 0.8rem;
+        }
+      }
+    }
+  }
+}
+@keyframes hamburger_plus {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+/* media query for tablet*/
+@media only screen and (min-width: 760px) {
+  .navbar {
+    justify-content: space-evenly;
+    .hamburger {
+      display: none !important;
+    }
+    .navlist ul {
+      position: initial !important;
+      display: block !important;
+      height: auto !important;
+      width: fit-content !important;
+      background-color: transparent !important;
+      & li a::after {
+        display: none;
+      }
+      & li {
+        display: inline-block;
+        font-size: 1.8rem;
+        transition: transform ease-in-out 0.3s;
+        &:not(:last-child):hover {
+          transform: scale(1.1);
+        }
+        a {
+          font-size: 1.8rem !important;
+        }
+      }
+    }
+  }
+}
+.template {
+  background-color: $color-html;
+  border-radius: 8px;
+}

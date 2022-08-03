@@ -1,0 +1,129 @@
+#hero {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 9rem 0 0rem 0;
+    &-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      h1 {
+        font-size: 4rem;
+        width: 60%;
+        padding: 0.9rem 0;
+        span {
+          color: $color-span;
+        }
+        .dot {
+          color: #57efb4;
+        }
+      }
+      p {
+        font-size: 1.7rem;
+        color: $color-span;
+        width: 85%;
+        font-weight: 400;
+      }
+      .hire-me {
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        background-color: $color-blue;
+        color: $color-white;
+        border-radius: 0.8rem;
+        border: none;
+        display: block;
+        text-align: center;
+      }
+    }
+    &-items {
+      display: grid;
+      padding: 2rem 0;
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      p {
+        color: $color-span;
+      }
+      .html,
+      .react {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+        border-radius: 8px;
+        .logo,
+        .logo_react {
+          height: 4.5rem;
+          width: 4.5rem;
+          border-radius: 5px;
+          background: $color-html;
+          position: relative;
+          margin-bottom: 2rem;
+          .img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+        h1 {
+          margin-bottom: 2rem;
+          font-weight: 500;
+        }
+      }
+      .react {
+        background: $color-html;
+        border-radius: 0.8rem;
+        .logo_react {
+          background: $color-green;
+        }
+      }
+    }
+  }
+}
+//
+@media only screen and (min-width: 760px) {
+  #hero {
+    margin-bottom: 8rem;
+    .hero {
+      height: 100vh;
+      &-header {
+        h1 {
+          font-size: 6rem;
+        }
+        span {
+          margin-left: 0;
+        }
+        p {
+          font-size: 2rem;
+        }
+        .hire-me {
+          display: inline-block;
+          padding: 1rem 2rem;
+        }
+      }
+      &-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #hero {
+    margin-bottom: 0rem;
+    .hero-header {
+      h1 {
+        font-size: 7.2rem;
+      }
+    }
+    .hero-items {
+      margin-top: 4rem;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+}

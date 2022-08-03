@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Fredoka&family=Inter:wght@200&family=Lato:ital,wght@0,400;0,900;1,700&family=Montserrat:ital,wght@0,100;0,400;0,600;1,100;1,200;1,300;1,500&family=Poppins:ital,wght@0,700;1,200;1,500;1,600&family=Roboto:ital@1&family=Source+Sans+Pro:ital,wght@0,200;0,600;1,200;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  color: $color-white;
+  font-family: "DM sans";
+  scroll-behavior: smooth;
+}
+section,
+nav,
+header,
+footer {
+  padding: 3rem 4rem;
+}
+body {
+  background-color: $color-primary !important ;
+}
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+p {
+  font-size: 1.6rem;
+  color: $color-span;
+}
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+.nav__logo--container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+  }
+}
+.hidden {
+  display: flex !important;
+  left: 30% !important;
+}
+@media only screen and (min-width: 760px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 67%;
+  }
+}
+.active__link {
+  color: $color-white !important;
+}
+.color {
+  background: rgba($color-primary, 0.6) !important;
+  // background: #12121c21 !important;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+section {
+  transition: all ease-in-out 0.5s;
+}

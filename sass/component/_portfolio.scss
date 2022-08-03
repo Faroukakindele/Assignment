@@ -1,0 +1,152 @@
+#portfolio {
+  .portfolio {
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      .header {
+        margin-bottom: 2rem;
+        h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          width: 85%;
+        }
+      }
+      .main {
+        padding: 2rem 0;
+        .content {
+          padding: 2rem 0;
+          h1 {
+            font-size: 3.4rem;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 1.8rem;
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+    &-writeup {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      margin-top: 3rem;
+
+      .portfolio-img {
+        height: 40rem;
+        border-radius: 8px;
+        overflow: hidden;
+        background-size: 100%;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .writeup-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          font-size: 3.2rem;
+          margin-bottom: 2rem;
+        }
+        p {
+          margin-bottom: 2rem;
+          line-height: 1.7;
+          font: 1.6rem;
+        }
+      }
+    }
+    .getintouch {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      gap: 5rem;
+      .left {
+        button {
+          margin-top: 3rem;
+          font-size: 1.6rem;
+          text-transform: capitalize;
+          padding: 1.5rem 2.5rem;
+          border-radius: 8px;
+          border: none;
+          background: $color-blue;
+        }
+      }
+      .right {
+        h1 {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 760px) {
+  #portfolio {
+    .portfolio {
+      &-info {
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: row;
+        .header {
+          display: flex;
+          justify-content: flex-start;
+          width: 75%;
+          h1 {
+            font-size: 4rem;
+          }
+        }
+        .main {
+          padding: 0;
+          .content {
+            padding: 0;
+
+            &:not(:last-child) {
+              margin-bottom: 3rem;
+            }
+          }
+        }
+      }
+      &-writeup {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        .portfolio-img {
+          height: 50rem;
+        }
+        .writeup-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          text-align: left;
+
+          h1 {
+            font-size: 4.8rem;
+          }
+        }
+      }
+      .getintouch {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .left {
+          p {
+            font-size: 1.4rem;
+            width: 65%;
+            line-height: 2rem;
+          }
+        }
+        .right {
+          h1 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+}

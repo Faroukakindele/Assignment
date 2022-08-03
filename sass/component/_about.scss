@@ -1,0 +1,46 @@
+#about {
+  .about {
+    display: grid;
+    &-info {
+      margin-bottom: 2rem;
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 1.7rem;
+      }
+      p {
+        color: $color-span;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+      }
+    }
+    &-img {
+      height: 40rem;
+      border-radius: 8px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and(min-width:760px) {
+  #about {
+    .about {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      &-info {
+        padding: 3rem 0;
+        h1 {
+          font-size: 4rem;
+          font-weight: 700;
+        }
+      }
+      &-img {
+        height: 45rem;
+      }
+    }
+  }
+}
