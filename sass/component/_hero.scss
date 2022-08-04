@@ -12,6 +12,7 @@
         font-size: 4rem;
         width: 60%;
         padding: 0.9rem 0;
+        margin-bottom: 2rem;
         span {
           color: $color-span;
         }
@@ -23,11 +24,12 @@
         font-size: 1.7rem;
         color: $color-span;
         width: 85%;
+
         font-weight: 400;
       }
       .hire-me {
         padding: 1.5rem 0;
-        margin-top: 2rem;
+        margin-top: 3rem;
         text-transform: capitalize;
         font-size: 1.6rem;
         background-color: $color-blue;
@@ -41,6 +43,7 @@
     &-items {
       display: grid;
       padding: 2rem 0;
+      padding-top: 10rem;
       h1 {
         font-size: 2.4rem;
         font-weight: 600;
@@ -99,9 +102,8 @@
 @media only screen and (min-width: 760px) {
   #hero {
     margin-bottom: 3rem;
-    height: 80vh;
+
     .hero {
-      height: 100vh;
       &-header {
         h1 {
           font-size: 6rem;
