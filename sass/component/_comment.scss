@@ -25,7 +25,9 @@
       justify-content: center;
       align-items: start;
       gap: 2rem;
-
+      img {
+        background: none;
+      }
       &:nth-child(odd) {
         background: $color-html;
         border-radius: 8px;
@@ -88,8 +90,6 @@
           font-size: 1.7rem;
           line-height: 1.7;
         }
-      }
-      .end {
       }
     }
   }

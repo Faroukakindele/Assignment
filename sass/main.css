@@ -666,6 +666,10 @@ section {
   gap: 2rem;
 }
 
+#comment .comment-container img {
+  background: none;
+}
+
 #comment .comment-container:nth-child(odd) {
   background: #222233;
   border-radius: 8px;
