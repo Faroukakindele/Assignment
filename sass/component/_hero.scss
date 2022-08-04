@@ -85,6 +85,17 @@
   }
 }
 //
+@media only screen and(min-width:512px) {
+  #hero {
+    padding-bottom: 1rem;
+  }
+  .hero-items {
+    padding-bottom: 0;
+    .server {
+      margin-bottom: 0 !important;
+    }
+  }
+}
 @media only screen and (min-width: 760px) {
   #hero {
     margin-bottom: 3rem;
