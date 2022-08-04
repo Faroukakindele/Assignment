@@ -77,3 +77,20 @@
     }
   }
 }
+@media only screen and(min-width:760px) {
+  #comment {
+    .comment {
+      &-info {
+        h1 {
+          font-size: 5.5rem;
+        }
+        p {
+          font-size: 1.7rem;
+          line-height: 1.7;
+        }
+      }
+      .end {
+      }
+    }
+  }
+}

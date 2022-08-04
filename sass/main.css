@@ -505,12 +505,11 @@ section {
 }
 
 #img__components .img__components .img__container {
-  height: 25rem;
   width: 100%;
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
-  border-radius: 15px;
+  border-radius: 3px;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
@@ -602,6 +601,21 @@ section {
   #about .about-info h1 {
     font-size: 4rem;
     font-weight: 700;
+  }
+  #about .about-img {
+    height: 45rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #about .about-info h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+  }
+  #about .about-info p {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    font-weight: 500;
   }
   #about .about-img {
     height: 45rem;
@@ -708,6 +722,16 @@ section {
   #comment .comment .end {
     -ms-grid-column-align: end;
         justify-self: end;
+  }
+}
+
+@media only screen and (min-width: 760px) {
+  #comment .comment-info h1 {
+    font-size: 5.5rem;
+  }
+  #comment .comment-info p {
+    font-size: 1.7rem;
+    line-height: 1.7;
   }
 }
 
