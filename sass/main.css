@@ -9,7 +9,7 @@
 html {
   font-size: 62.5%;
   color: white;
-  font-family: "DM sans";
+  font-family: DM sans, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -359,6 +359,9 @@ section {
 #hero .hero-header h1 {
   font-size: 4rem;
   width: 60%;
+  opacity: 0;
+  -webkit-animation: h1Movement 1.5s ease-in-out 0.5s forwards;
+          animation: h1Movement 1.5s ease-in-out 0.5s forwards;
   padding: 0.9rem 0;
   margin-bottom: 2rem;
 }
@@ -376,11 +379,23 @@ section {
   color: #88888d;
   width: 85%;
   font-weight: 400;
+  opacity: 0;
+}
+
+#hero .hero-header p:nth-child(2) {
+  -webkit-animation: h1Movement 1.5s ease-in-out 1s forwards;
+          animation: h1Movement 1.5s ease-in-out 1s forwards;
+}
+
+#hero .hero-header p:nth-child(3) {
+  -webkit-animation: h1Movement 1.5s ease-in-out 1.5s forwards;
+          animation: h1Movement 1.5s ease-in-out 1.5s forwards;
 }
 
 #hero .hero-header .hire-me {
   padding: 1.5rem 0;
   margin-top: 3rem;
+  opacity: 0;
   text-transform: capitalize;
   font-size: 1.6rem;
   background-color: #006ada;
@@ -389,6 +404,8 @@ section {
   border: none;
   display: block;
   text-align: center;
+  -webkit-animation: h1Movement 1s ease-in-out 2s forwards;
+          animation: h1Movement 1s ease-in-out 2s forwards;
 }
 
 #hero .hero-items {
@@ -453,6 +470,24 @@ section {
   background: #57efb4;
 }
 
+@-webkit-keyframes h1Movement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes h1Movement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media only screen and (min-width: 512px) {
   #hero {
     padding-bottom: 1rem;
@@ -471,16 +506,28 @@ section {
   }
   #hero .hero-header h1 {
     font-size: 6rem;
+    opacity: 1;
+    -webkit-animation: none !important;
+            animation: none !important;
   }
   #hero .hero-header span {
     margin-left: 0;
+    -webkit-animation: none !important;
+            animation: none !important;
+    opacity: 1;
   }
   #hero .hero-header p {
     font-size: 2rem;
+    opacity: 1;
+    -webkit-animation: none !important;
+            animation: none !important;
   }
   #hero .hero-header .hire-me {
     display: inline-block;
     padding: 1rem 2rem;
+    opacity: 1;
+    -webkit-animation: none !important;
+            animation: none !important;
   }
   #hero .hero-items {
     display: -ms-grid;
@@ -559,6 +606,7 @@ section {
 
 @media only screen and (min-width: 1200px) {
   #img__components .img__components {
+    padding: 5rem 0;
     display: -ms-grid;
     display: grid;
   }

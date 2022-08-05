@@ -1,6 +1,7 @@
 #img__components {
   .img__components {
     display: flex;
+
     flex-direction: column;
     .img__container {
       width: 100%;
@@ -44,6 +45,7 @@
 @media only screen and(min-width:1200px) {
   #img__components {
     .img__components {
+      padding: 5rem 0;
       display: grid;
       .img__container {
         height: 70rem;

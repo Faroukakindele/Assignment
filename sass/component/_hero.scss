@@ -11,6 +11,8 @@
       h1 {
         font-size: 4rem;
         width: 60%;
+        opacity: 0;
+        animation: h1Movement 1.5s ease-in-out 0.5s forwards;
         padding: 0.9rem 0;
         margin-bottom: 2rem;
         span {
@@ -24,12 +26,19 @@
         font-size: 1.7rem;
         color: $color-span;
         width: 85%;
-
         font-weight: 400;
+        opacity: 0;
+        &:nth-child(2) {
+          animation: h1Movement 1.5s ease-in-out 1s forwards;
+        }
+        &:nth-child(3) {
+          animation: h1Movement 1.5s ease-in-out 1.5s forwards;
+        }
       }
       .hire-me {
         padding: 1.5rem 0;
         margin-top: 3rem;
+        opacity: 0;
         text-transform: capitalize;
         font-size: 1.6rem;
         background-color: $color-blue;
@@ -38,6 +47,7 @@
         border: none;
         display: block;
         text-align: center;
+        animation: h1Movement 1s ease-in-out 2s forwards;
       }
     }
     &-items {
@@ -87,6 +97,17 @@
     }
   }
 }
+@keyframes h1Movement {
+  0% {
+    opacity: 0;
+  }
+  // 50% {
+  //   opacity: 0.5;
+  // }
+  100% {
+    opacity: 1;
+  }
+}
 //
 @media only screen and(min-width:512px) {
   #hero {
@@ -107,16 +128,24 @@
       &-header {
         h1 {
           font-size: 6rem;
+          opacity: 1;
+          animation: none !important;
         }
         span {
           margin-left: 0;
+          animation: none !important;
+          opacity: 1;
         }
         p {
           font-size: 2rem;
+          opacity: 1;
+          animation: none !important;
         }
         .hire-me {
           display: inline-block;
           padding: 1rem 2rem;
+          opacity: 1;
+          animation: none !important;
         }
       }
       &-items {
