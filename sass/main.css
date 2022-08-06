@@ -92,8 +92,12 @@ section {
   transition: all ease-in-out 0.5s;
 }
 
+#nav.color {
+  position: fixed !important;
+}
+
 #nav {
-  position: fixed;
+  position: initial;
   z-index: 100;
   left: 0;
   top: 0;
@@ -340,7 +344,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 9rem 0 0rem 0;
+  padding: 5rem 0 0rem 0;
 }
 
 #hero .hero-header {

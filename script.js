@@ -31,10 +31,8 @@ const stickyCallBack = function (entries, observer) {
   const [entry] = entries;
   if (entry.isIntersecting) {
     nav.classList.remove("color");
-    console.log("intersecting");
   } else {
     nav.classList.add("color");
-    console.log("not");
   }
 };
 const stickyOption = {
