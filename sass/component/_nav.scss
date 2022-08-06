@@ -23,7 +23,7 @@
     .navlist ul {
       display: flex;
       list-style: none;
-      position: absolute;
+      position: fixed;
       width: 100vw;
       height: 100vh;
       left: 100%;
@@ -34,7 +34,7 @@
       z-index: 1;
       flex-direction: column;
       justify-content: center;
-      transition: left ease 0.5s;
+      transition: all 0.8s ease;
       &.active {
         left: 15%;
       }
@@ -73,6 +73,11 @@
     .hamburger.active .bar.bar::before {
       top: 0;
       bottom: 0;
+    }
+    .hamburger.active {
+      position: fixed;
+      right: 3rem;
+      top: 1rem;
     }
     .hamburger {
       z-index: 100;

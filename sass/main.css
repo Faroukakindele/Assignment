@@ -133,7 +133,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   left: 100%;
@@ -151,8 +151,8 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: left ease 0.5s;
-  transition: left ease 0.5s;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 #nav .navbar .navlist ul.active {
@@ -199,6 +199,12 @@ section {
 #nav .navbar .hamburger.active .bar.bar::before {
   top: 0;
   bottom: 0;
+}
+
+#nav .navbar .hamburger.active {
+  position: fixed;
+  right: 3rem;
+  top: 1rem;
 }
 
 #nav .navbar .hamburger {
@@ -567,6 +573,7 @@ section {
 }
 
 #img__components .img__components .img__container {
+  height: 100%;
   width: 100%;
   background-size: 100%;
   background-position: top;
