@@ -61,18 +61,6 @@ a {
   left: 30% !important;
 }
 
-@media only screen and (min-width: 760px) {
-  html {
-    font-size: 62.5%;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 67%;
-  }
-}
-
 .active__link {
   color: white !important;
 }
@@ -96,6 +84,18 @@ section {
   position: fixed !important;
 }
 
+@media only screen and (min-width: 760px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 67%;
+  }
+}
+
 #nav {
   position: initial;
   z-index: 100;
@@ -108,8 +108,7 @@ section {
 }
 
 #nav .nav {
-  min-height: 2vh;
-  border-color: transparent;
+  min-height: 3vh;
 }
 
 #nav .navbar {
@@ -125,7 +124,7 @@ section {
   width: 100%;
   height: 100%;
   max-width: 120rem;
-  padding: 0 0rem;
+  padding: 0rem;
 }
 
 #nav .navbar .navlist ul {
@@ -579,8 +578,6 @@ section {
   background-position: top;
   background-repeat: no-repeat;
   border-radius: 3px;
-  -o-object-fit: cover;
-     object-fit: cover;
   overflow: hidden;
   margin-bottom: 1rem;
 }
@@ -604,10 +601,6 @@ section {
 }
 
 @media only screen and (min-width: 760px) {
-  #img__components .img__components {
-    display: -ms-grid;
-    display: grid;
-  }
   #img__components .img__components .img__container {
     height: 55rem;
     margin-bottom: 1rem;
@@ -617,8 +610,6 @@ section {
 @media only screen and (min-width: 1200px) {
   #img__components .img__components {
     padding: 8rem 0;
-    display: -ms-grid;
-    display: grid;
   }
   #img__components .img__components .img__container {
     height: 70rem;

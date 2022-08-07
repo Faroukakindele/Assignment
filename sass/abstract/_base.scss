@@ -45,16 +45,7 @@ a {
   display: flex !important;
   left: 30% !important;
 }
-@media only screen and (min-width: 760px) {
-  html {
-    font-size: 62.5%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  html {
-    font-size: 67%;
-  }
-}
+
 .active__link {
   color: $color-white !important;
 }
@@ -71,4 +62,14 @@ section {
 }
 #nav.color {
   position: fixed !important;
+}
+@media only screen and (min-width: 760px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 67%;
+  }
 }

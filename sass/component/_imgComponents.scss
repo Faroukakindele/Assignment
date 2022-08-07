@@ -9,7 +9,6 @@
       background-position: top;
       background-repeat: no-repeat;
       border-radius: 3px;
-      object-fit: cover;
       overflow: hidden;
       margin-bottom: 1rem;
       img {
@@ -34,7 +33,6 @@
 @media only screen and(min-width:760px) {
   #img__components {
     .img__components {
-      display: grid;
       .img__container {
         height: 55rem;
         margin-bottom: 1rem;
@@ -46,7 +44,6 @@
   #img__components {
     .img__components {
       padding: 8rem 0;
-      display: grid;
       .img__container {
         height: 70rem;
         margin-bottom: 10rem;

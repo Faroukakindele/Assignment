@@ -6,10 +6,13 @@ const hero = document.querySelector("#hero");
 const nav = document.querySelector("#nav");
 const allLinks = document.querySelectorAll(".navlist ul a");
 const AllSections = document.querySelectorAll("section");
+
+// hamburger closing and opening functions
 function closeModal(e) {
   hamburger.classList.toggle("active");
   navigation.classList.toggle("hidden");
 }
+hamburger.addEventListener("click", closeModal);
 navigationContainer.addEventListener("click", function (e) {
   if (
     e.target.classList.contains("link") ||
@@ -23,7 +26,6 @@ navigationContainer.addEventListener("click", function (e) {
   }
 });
 
-hamburger.addEventListener("click", closeModal);
 // sticky header
 const navHeight = nav.getBoundingClientRect().height;
 console.log(navHeight);
@@ -44,7 +46,8 @@ const stickyHeader = new IntersectionObserver(
   stickyCallBack,
   stickyOption
 ).observe(hero);
-// smooth reveal
+
+// smooth reveal scrolling
 const sectionCallback = (entries, observer) => {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
