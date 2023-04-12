@@ -86,13 +86,13 @@ section {
 
 @media only screen and (min-width: 760px) {
   html {
-    font-size: 62.5%;
+    font-size: 60%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 67%;
+    font-size: 60%;
   }
 }
 
